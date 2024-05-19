@@ -1,5 +1,5 @@
 from collections import Counter
-nucleotides = ['A', 'C', 'G', 'T']
+from structures import * 
 
 # creating functions for  dna string validation and freq calculation 
 
@@ -16,3 +16,12 @@ def countNucFrequency(seq: str) -> dict:
     tempFreqDict = Counter(seq)
     return dict(tempFreqDict)
 
+def transcription(seq: str) -> str:
+    """ takes string of dna and return the rna string of it. 
+    Refere to transcription process in biology. 
+    Note: T doe snot excist in rna, it is replaced by the U  """
+    return seq.replace('T', 'U')
+
+def reverse_complement(seq: str) -> str:
+    """ Takes the string DNA and return the reversed dna string """
+    return ''.join([dna_reverse_complement[nuc] for nuc in seq])[::-1]
