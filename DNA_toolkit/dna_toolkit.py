@@ -1,5 +1,5 @@
 from collections import Counter
-from bio_structures import * 
+from bio_structure import * 
 
 # creating functions for  dna string validation and freq calculation 
 

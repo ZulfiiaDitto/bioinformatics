@@ -1,6 +1,7 @@
 from dna_toolkit import *
 import random
-from  structures import * 
+from bio_structure import *  
+
 # testing enviroment to make sure fucntions are working  
 
 randDNA = ''.join([random.choice(nucleotides) for nuc in range(20)])
