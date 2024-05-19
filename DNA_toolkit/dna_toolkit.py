@@ -23,5 +23,6 @@ def transcription(seq: str) -> str:
     return seq.replace('T', 'U')
 
 def reverse_complement(seq: str) -> str:
-    """ Takes the string DNA and return the reversed dna string """
+    """ Takes the string DNA and return the reversed dna string 
+     by replacing the A to T and C to G and reversing the string after all """
     return ''.join([dna_reverse_complement[nuc] for nuc in seq])[::-1]
