@@ -21,5 +21,7 @@ print(f'[6]. GC content in subsequence k = 5: {gc_content_subset(dna, 5)} \n ')
 print(f'[7].  Aminoacid seq from DNA : {translate_seq(dna, 0)} \n')
 
 print(f'[8]. Codon frequency (L): {codon_usage(dna, "L")} \n')
-
+print(f'[9]. reading frames :')
+for i in gen_reading_frames(dna):
+    print(i)
 
