@@ -25,4 +25,21 @@ def transcription(seq: str) -> str:
 def reverse_complement(seq: str) -> str:
     """ Takes the string DNA and return the reversed dna string 
      by replacing the A to T and C to G and reversing the string after all """
-    return ''.join([dna_reverse_complement[nuc] for nuc in seq])[::-1]
+   # return ''.join([dna_reverse_complement[nuc] for nuc in seq])[::-1]
+    mapping = str.maketrans('ATCG', 'TAGC')
+    return seq.translate(mapping)[::-1]
+
+def gc_content(seq):
+    """GC Content in dna/rna sequence"""
+    return round((seq.count('C') + seq.count('G'))/len(seq) * 100)
+
+def gc_content_subset(seq, k = 20 ):
+    """GC content in dna/rna sub-sequence lenkgh k, k = 20 by default"""
+    res = [gc_content(seq[i:i+k]) for i in range(0, len(seq) - k+1, k)]
+    # for i in range(0, len(seq) - k+1, k):
+    #     subseq = seq[i:i+k]
+    #     res.append(gc_content(subseq))
+    return res
+
+
+
