@@ -70,3 +70,34 @@ def gen_reading_frames(seq):
     frames.append(translate_seq(reverse_complement(seq), 2))
     return frames
 
+def proteins_from_rf(aa_seq):
+    """ compute all posible proteins in seq nad return list of them """
+    current_pr = []
+    protein = []
+    for aa in aa_seq:
+        if aa == '_':
+            # STOP accumulating if Stop codon was found
+            if current_pr:
+                for p in current_pr:
+                    protein.append(p)
+                current_pr = []
+        else:
+            # START accumulating AA if M ( it is a strat codon)
+            if aa == 'M':
+                current_pr.append("")
+            for i in range(len(current_pr)):
+                current_pr[i] += aa
+    return protein
+
+def all_proteins_from_all_pr_frames(seq, start =0, end = 0, ordered = False):
+    if end > start:
+        rfs = gen_reading_frames(seq[start:end])
+    else: rfs = gen_reading_frames(seq)
+    res = []
+    for rf in rfs:
+        prots = proteins_from_rf(rf)
+        for p in prots:
+            res.append(p)
+    if ordered:
+        return sorted(res, key = len, reverse=True)
+    return res
