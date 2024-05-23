@@ -1,5 +1,9 @@
 # Nucleotids in DNA 
-nucleotides = ['A', 'C', 'G', 'T']
+NUCLEOTIDE_BASE = {
+    "DNA": ["A", "T", "C", "G"],
+    "RNA": ["A", "U", "C", "G"]
+}
+
 
 # Mathcing Nucleotids in DNA for reversed transcription 
 dna_reverse_complement = {'A':'T', 
