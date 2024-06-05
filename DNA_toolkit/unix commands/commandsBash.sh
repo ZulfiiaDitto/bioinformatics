@@ -75,7 +75,6 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/160/895/GCF_000160895.1_AS
 ok, if you dont have wget, install homebrew. and install wget thought the folllowing comand 
 brew install wget 
 
-tring to make the change 
 "" 
 
 
