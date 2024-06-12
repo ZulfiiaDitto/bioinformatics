@@ -28,7 +28,32 @@ con <- unz(temp, "E-GEOD-4707-processed-data-1618157355.txt")
 data <- read.table(con, header = TRUE,  sep="\t")
 unlink(temp)
 
-df[c('Characteristics..DiseaseState.' , 'Scan.Name')]
+head(data, 7) # some cleaning of the columns names are needed
+
+# the first row in data and column names need to be combined
+first_row = as.character(data[1, ])
+new_columns = paste(names(data),first_row, sep ="_")
+print(new_columns)
+
+final <- data[-1,]
+colnames(final) <- new_columns
+
+# 3. selecting only columns with mean green and red fluorescent light 
+
+final <- final[, grep("Mean|Scan", names(final), value = TRUE)]
+
+
+# Step 3. 1: Identify columns matching the pattern
+pattern <- "GEO:AGILENT_gMeanSignal"
+colnames(final) <- gsub(pattern, "greenMeanSignal", colnames(final))
+
+pattern2 <- "GEO:AGILENT_rMeanSignal"
+colnames(final) <- gsub(pattern2, "redMeanSignal", colnames(final))
+
+# 4 normalization 
+
+# Need to be paused till I unerstand how to do it -> perfectly 
+
 
 
 
