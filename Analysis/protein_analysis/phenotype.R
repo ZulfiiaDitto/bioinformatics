@@ -1,4 +1,3 @@
-library(seqinr)
 df <- read.table('phenotypes.txt')
 df[1:10, 1:5]
 # correlations

@@ -1,0 +1,51 @@
+Investigation Title	Transcription profiling of placenta from women who underwent a normal pregnancy and from those suffering from early or late onset pre-eclampsia	
+Comment[AdditionalFile:XLS]	E-GEOD-4707.hybs.xls
+Comment[Submitted Name]	Microarray Analysis of Differentially Expressed Genes in Placental Tissue of Severe Preeclampsia	
+Experimental Design	disease_state_design	co-expression_design	transcription profiling by array	
+Experimental Design Term Source REF	mo	mo	EFO	
+Comment[ArrayExpressReleaseDate]	2008-05-07	
+Comment[SecondaryAccession]	GSE4707	
+Comment[SecondaryAccession]	GDS2080	
+Comment[AEMIAMESCORE]	4	
+Comment[ArrayExpressAccession]	E-GEOD-4707	
+Comment[MAGETAB TimeStamp_Version]	2010-08-05 17:21:19 Last Changed Rev: 13058	
+Experimental Factor Name	DiseaseState	
+Experimental Factor Type	disease_state	
+Experimental Factor Term Source REF	
+Person Last Name	Nishizawa	
+Person First Name	Haruki	
+Person Mid Initials	
+Person Email	nharuki@fujita-hu.ac.jp	
+Person Phone	
+Person Fax	
+Person Address	Gynecology & Obstetrics, Fujita Health University, 1-98 Dengakugakubo Kutsukake-cho, Toyoake, 470-1192, Japan	
+Person Affiliation	Fujita Health University	
+Person Roles	submitter	
+Person Roles Term Source REF	The MGED Ontology	
+Quality Control Type	
+Quality Control Term Source REF	
+Replicate Type	
+Replicate Term Source REF	
+Normalization Type	
+Normalization Term Source REF	
+Date of Experiment	
+Public Release Date	2008-05-07	
+PubMed ID	16860862	
+Publication DOI	16860862	
+Publication Author List	H Nishizawa, K Pryor-Koishi, T Kato, H Kowa, H Kurahashi, Y Udagawa	
+Publication Title	Microarray analysis of differentially expressed fetal genes in placental tissue derived from early and late onset severe pre-eclampsia.	
+Publication Status	journal_article	
+Publication Status Term Source REF	The MGED Ontology	
+Experiment Description	Pre-eclampsia is one of the most serious pregnancy-associated disorders, and is defined by hypertension (systolic blood pressure higher than 140mmHg or diastolic blood pressure higher than 90mmHg) with proteinuria (more than 0.3g/day). It is not a simple complication of pregnancy, but is rather a syndrome of multiple organ failure involving the liver, kidney, and lung, as well as coagulatory and neural systems. There is now an emerging consensus that pre-eclampsia is a complex polygenetic trait in which maternal and fetal genes, as well as environmental factors, are involved, although the precise mechanism of the disorder has remained elusive. In this study, we have performed gene expression profiling to further elucidate the mechanisms underlying the development of the pre-eclamptic condition. We thus compared the expression profiles in placentas from women who underwent a normal pregnancy and from women suffering from severe pre-eclampsia. In addition, we compared the expression data between the early and late onset forms of pre-eclampsia and obtained a number of potential new prognostic biomarkers for this disease. Experiment Overall Design: Placental biopsies were obtained during Caesarean section from both normotensive patients and from those with pre-eclampsia (n = 14) (early onset type; earlier than 31 weeks gestation, n = 6 and late onset type; 31 weeks gestation or later, n = 8). Pre-eclampsia was defined as a blood pressure of higher than 160/110 mmHg, with proteinuria of more than 2g in a 24 hour collection. The expression profiles of approximately 47,669 genes were analyzed using a Whole Human Genome Oligo Microarray Kit (Agilent Technologies). A total of 10 placentas from women with pre-eclampsia and four from normal subjects were used in the hybridizations. Reverse transcription labeling and hybridization was performed using the protocol recommended by the manufacturer. The microarray experiments were then carried out using competitive hybridization experiments with Cy3 and Cy5-labeled targets; one with test placental RNAs from patients or normal control subjects, and another using pooled normal placental RNA as a template control for normalization. The glass slides were scanned using an Agilent G2565BA microarray scanner. Scanned images were then analyzed using Feature Extraction software. The average signal intensities were corrected for median background intensity and transferred with GenBank descriptors to a Microsoft Excel data spreadsheet (Microsoft, Redmond, WA). Data analysis was performed using Genespring software version 6.1 (Silicon Genetics, Redwood City, CA). After intensity dependent normalization (Lowess), the expression levels relative to the control were calculated as a ratio, and the expression profiles were then compared between each pre-eclamptic or normal sample.	
+Protocol Name	P-4707-1	
+Protocol Type	bioassay_data_transformation	
+Protocol Description	Data heading descriptions from GEO:<br>#ID_REF = <br>#VALUE = Log10 Ratio of normalized Cy5 (red) signal to normalized Cy3 (green) signal<br>#PValueLogRatio = p-value of the log ratio as determined by Agilent error model<br>#gProcessedSignal = normalized and background subtracted Cy3 (green) signal<br>#rProcessedSignal = normalized and background subtracted Cy5 (red) signal<br>#gMeanSignal = raw Cy3 (green) signal intensity<br>#rMeanSignal = raw Cy5 (red) signal intensity	
+Protocol Parameters	
+Protocol Hardware	
+Protocol Software	
+Protocol Contact	
+Protocol Term Source REF	The MGED Ontology	
+SDRF File	E-GEOD-4707.sdrf.txt	
+Term Source Name	mo	NCI_thesaurus		EFO	The MGED Ontology	ArrayExpress	mo	EFO	The MGED Ontology	
+Term Source File	http://mged.sourceforge.net/ontologies/MGEDontology.php	ncithesaurus.obo.alt		http://www.ebi.ac.uk/efo/	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/arrayexpress	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/efo/	http://mged.sourceforge.net/ontologies/MGEDontology.php	
+Term Source Version										
