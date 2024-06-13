@@ -52,7 +52,7 @@ colnames(final) <- gsub(pattern2, "redMeanSignal", colnames(final))
 
 # 4 normalization 
 
-# Need to be paused till I unerstand how to do it -> perfectly 
+
 
 
 
