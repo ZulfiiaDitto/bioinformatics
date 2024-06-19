@@ -1,5 +1,5 @@
 .venv
 .DS_Store
 .RHistory
-.h5
+*.h5
 '/Users/zulfiiaditto/Documents/bioinformatics/Analysis/scRNA-seq/20k_NSCLC_DTC_3p_nextgem_intron_Multiplex_count_raw_feature_bc_matrix.h5'
