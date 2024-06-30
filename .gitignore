@@ -7,3 +7,5 @@
 **/*chekpoints
 *.gmt
 *.rds
+*.fa
+*.fastq
