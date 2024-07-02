@@ -9,3 +9,5 @@
 *.rds
 *.fa
 *.fastq
+*.fasta
+exams.py
