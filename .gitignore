@@ -11,3 +11,4 @@
 *.fastq
 *.fasta
 exams.py
+*.fq
