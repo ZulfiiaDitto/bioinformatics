@@ -12,3 +12,9 @@
 *.fasta
 exams.py
 *.fq
+*.tar
+*.out
+*.1
+*.bai
+*.gtf
+*.bam
