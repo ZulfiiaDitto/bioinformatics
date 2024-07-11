@@ -18,3 +18,5 @@ exams.py
 *.bai
 *.gtf
 *.bam
+*.fas
+*.bt2
