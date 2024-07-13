@@ -72,7 +72,7 @@ x = rlogData[,1] + rlogData[,2]
 plot(x, y, col = 3)
 
 #question 9 
-
+library('rafalib')
 con =url("http://bowtie-bio.sourceforge.net/recount/ExpressionSets/montpick_eset.RData")
 load(file=con)
 close(con)
@@ -81,3 +81,50 @@ pdata=pData(mp)
 edata=as.data.frame(exprs(mp))
 fdata = fData(mp)
 
+# original 
+# lets calculate the euclidian distance between rows 
+distO = dist(t(edata))
+head(distO)
+heatmap(as.matrix(distO), col = colramp, Colv = NA, Rowv = NA)
+hclustO = hclust(distO)
+plot(hclustO, hang = -1, labels = FALSE, title = 'Original') # total mess
+
+# After filtering all genes with rowMeans
+edataF = edata[rowMeans(edata) < 100, ]
+dim(edataF)
+distF = dist(t(edataF))
+heatmap(as.matrix(distF), col = colramp, Colv = NA, Rowv = NA)
+hclustF = hclust(distF)
+plot(hclustF, hang = -1, labels = FALSE)
+
+# log transformation 
+log_edata = log2(edata + 1)
+l_dist1 = dist(t(log_edata))
+l_hclust1 = hclust(l_dist1)
+
+par(mar=c(0, 4, 4, 2))
+plot(l_hclust1, hang=-1, main="perform log2 transform", labels=FALSE)
+
+
+# question 10 
+con =url("http://bowtie-bio.sourceforge.net/recount/ExpressionSets/montpick_eset.RData")
+load(file=con)
+close(con)
+mp = montpick.eset
+pdata=pData(mp)
+edata=as.data.frame(exprs(mp))
+fdata = fData(mp)
+
+edata = log2(edata + 1)
+
+# perfrom k-means clustering
+set.seed(1235)
+k2 = kmeans(edata,centers=2)
+matplot(t(k2$centers),col=1:2,type="l",lwd=3)
+
+dist1 = dist(t(edata))
+hclust1 = hclust(dist1)
+tree = cutree(hclust1, 2)
+
+par(mar=c(0, 4, 4, 2))
+plot(hclust1, tree, main="cutree")
