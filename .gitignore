@@ -20,3 +20,4 @@ exams.py
 *.bam
 *.fas
 *.bt2
+*.sam
