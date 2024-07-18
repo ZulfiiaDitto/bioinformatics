@@ -204,13 +204,10 @@ mod = model.matrix(~age, data=pheno)
 mod0 = model.matrix(~1, data=pheno)
 sva1 = sva(edata_cent, mod,mod0, n.sv=2)
 names(sva1)
-# correlation with age
-cor(sva1$sv, pheno$age)
-#[,1]
-#[1,] -0.1965366
-#[2,] -0.1560666
 
-# correlation with genger
+cor(sva1$sv, pheno$age)
+
+# correlation with gender 
 cor(sva1$sv, as.numeric(pheno$gender))
 
 #cor with race
